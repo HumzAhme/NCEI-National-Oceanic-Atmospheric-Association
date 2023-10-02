@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data categories</title>
+</head>
+<body>
+    <script src="noaFisheries.js"></script>
+    <div>Dataset ID:<!--()means in placeholder that only one value can be putted whereas no() means both can be putted separated by ,s.-->
+        <input type="text" placeholder="GSOM," onblur="dtasetid()" id="dtastid"> (optional)</div>
+    <div>Location ID:
+        <input type="text" placeholder="FIPS:37, FIPS:45," onblur="locaid()" id="locid"> (optional)</div>
+    <div>Station ID:
+        <input type="text" placeholder="COOP:310090,COOP:310184," onblur="staid()" id="staid"> (optional)</div>
+    <div>StartDate:
+        <input type="date" placeholder="(yyyy-mm-dd)" onblur="strtDt()" id="stardt"> (optional)</div>
+    <div>EndDate:
+        <input type="date" placeholder="(yyyy-mm-dd)" onblur="endat()" id="endte"> (optional)</div>
+    <div>SortField:
+        <input type="text" placeholder="(id, name, mindate, datacoverage, maxdate)" onblur="sortfild()" id="sorfld"> (optional)</div>
+    <div>SortOrder:
+        <input type="text" placeholder="(desc, asc)" onblur="sortord()" id="srordr"> (optional)</div>
+    <div>Limit of response results [default:25, max:1000]:
+        <input type="number" placeholder="(16, 68)" onblur="limt()" id="lmt"> (optional)</div>
+    <div>Offset [results to be skipped; default:0; vil begin from 24th result if 24]:
+        <input type="number" placeholder="24" onblur="ofst()" id="ofst"> (optional)</div>
+        
+<div><button id="sbm" onclick="fetchit2()">Go fetchit!</button></div>
+</body>
+</html>
